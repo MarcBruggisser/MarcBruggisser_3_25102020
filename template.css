@@ -1,0 +1,58 @@
+.wrapper, .page {
+  width: 450px;
+  margin: auto;
+}
+
+.padding, .page header {
+  padding: 1rem;
+}
+
+.alignerCentre, .page header {
+  text-align: center;
+}
+
+.block, .page header .fleche-section .trait-horizontal {
+  display: block;
+}
+
+.relative, .page header {
+  position: relative;
+}
+
+.absolute, .page header .fleche-section, .page header .fleche-section .trait-horizontal {
+  position: absolute;
+}
+
+body {
+  background-color: grey;
+  margin: 0;
+}
+
+.page header {
+  background-color: #FFF;
+}
+
+.page header .fleche-section {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-left: 4px solid #1a1919;
+  border-bottom: 4px solid #1a1919;
+  background-color: rgba(50, 50, 50, 0.5);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.page header .fleche-section .trait-horizontal {
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  height: 4px;
+  width: 30px;
+  background-color: #1a1919;
+}
+/*# sourceMappingURL=style.css.map */

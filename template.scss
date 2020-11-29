@@ -1,0 +1,102 @@
+
+
+
+
+
+// Annonce des taille d'écrans
+
+
+$smartphone:450px;
+
+
+
+
+
+
+// Annonce des classes préfaites
+
+
+.wrapper{
+    width: $smartphone; margin: auto;
+}
+
+
+
+
+
+
+
+
+// Annonce des composants
+
+
+// Annonce des couleurs
+
+
+$blanc:#FFF;
+$noir: rgb(26, 25, 25);
+
+$primaire:#9356DC;
+$secondaire:#FF79DA;
+$tertiaire:#99E2D0;
+
+
+// Annonce des marges et padding
+.padding{padding: 1rem;}
+
+
+// Annonce des textes
+.alignerCentre{text-align: center;}
+
+
+// Annonce des display et des positions
+
+
+.block{display: block;}
+
+.relative{position: relative;}
+.absolute{position: absolute;}
+
+
+
+
+
+
+
+
+
+
+// Cette partie traite les sections communes à toutes les pages
+
+
+
+// Généralité html
+
+
+
+body{background-color: grey; margin: 0;}
+
+
+
+.page {@extend .wrapper;
+
+
+    header{ @extend .relative; @extend .alignerCentre; @extend .padding; background-color: $blanc;
+    
+        .fleche-section{@extend .absolute; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; 
+            border-left: 4px solid $noir; border-bottom: 4px solid $noir;  background-color: rgba(50, 50, 50, 0.5);
+            transform: rotate(45deg); transform-origin: right;
+        
+            .trait-horizontal{@extend .block; @extend .absolute; top: 50%; transform: translateY(-50%) rotate(-45deg); height: 4px; width: 30px; background-color: $noir;  }
+            // .cote-de-fleche{@extend .block; @extend .absolute; top: 50%; transform: translateY(-50%); height: 30px; width: 30px; transform: rotate(45deg);
+            
+            //     background-color: rosybrown;
+            
+            // }    
+        }
+    
+    }
+
+
+}
+
