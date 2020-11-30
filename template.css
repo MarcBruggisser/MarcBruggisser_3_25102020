@@ -1,17 +1,40 @@
+body {
+  background-color: grey;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .wrapper, .page {
   width: 450px;
   margin: auto;
 }
 
-.padding, .page header {
+.padding, .page header, .page .corps-de-page, .page .corps-de-page article ul li {
   padding: 1rem;
 }
 
-.alignerCentre, .page header {
+.arrondis, .page .corps-de-page article ul li {
+  border-radius: 20px;
+}
+
+.ombre, .bouton-cta, .page .corps-de-page article ul li {
+  -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.5);
+          box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.5);
+}
+
+.alignerCentre, .bouton-cta, .page header {
   text-align: center;
 }
 
-.block, .page header .fleche-section .trait-horizontal {
+.block, .bouton-cta, .page header .fleche-section .trait-horizontal, .page .corps-de-page article h2::after {
   display: block;
 }
 
@@ -23,9 +46,18 @@
   position: absolute;
 }
 
-body {
-  background-color: grey;
-  margin: 0;
+.bouton-cta {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#bd53bd));
+  background: linear-gradient(#FF79DA, #bd53bd);
+  color: #FFF;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  max-width: 100px;
+  margin: auto;
+}
+
+.page {
+  background-color: #b91818 !important;
 }
 
 .page header {
@@ -38,8 +70,8 @@ body {
           transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  border-left: 4px solid #1a1919;
-  border-bottom: 4px solid #1a1919;
+  border-left: 4px solid #313030;
+  border-bottom: 4px solid #313030;
   background-color: rgba(50, 50, 50, 0.5);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -53,6 +85,36 @@ body {
           transform: translateY(-50%) rotate(-45deg);
   height: 4px;
   width: 30px;
-  background-color: #1a1919;
+  background-color: #313030;
 }
-/*# sourceMappingURL=style.css.map */
+
+.page .corps-de-page {
+  background-color: #F6F6F6;
+}
+
+.page .corps-de-page article h2 {
+  text-transform: uppercase;
+}
+
+.page .corps-de-page article h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+
+.page .corps-de-page article ul li {
+  background-color: #F6F6F6;
+  margin-bottom: 1rem;
+}
+
+.page .corps-de-page article ul li h3, .page .corps-de-page article ul li p {
+  margin: 0;
+}
+
+.page footer {
+  padding: 0.5rem 1rem;
+  background-color: #313030;
+  color: #FFF;
+}
+/*# sourceMappingURL=template.css.map */
