@@ -1,0 +1,165 @@
+body{@extend .roboto;}
+
+
+
+// Annonce des taille d'écrans
+
+
+$smartphone:450px;
+
+
+// Annonce des classes de mise en forme pour les composants
+
+
+// Annonce des couleurs
+
+
+$noir: rgb(49, 48, 48);
+$blanc:#FFF;
+$gris:#e2dddd;
+
+$primaire:#9356DC;
+$secondaire:#FF79DA;
+$tertiaire:#99E2D0;
+
+
+// Annonce des marges et padding et autres mise en forme
+.padding{padding: 1rem;}
+.arrondis{border-radius: 15px;}
+.ombre{box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);}
+
+
+// Annonce des textes et des polices d'écriture
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
+.shrikhand{font-family: 'Shrikhand', cursive;}
+.roboto{font-family: 'Roboto', sans-serif;}
+
+.alignerCentre{text-align: center;}
+
+
+
+// Annonce des display et des positions
+
+
+.block{display: block;}
+
+.relative{position: relative;}
+.absolute{position: absolute;}
+
+
+
+// Annonce des composants
+
+
+h1{@extend.shrikhand;}
+h2{font-weight: 300;}
+
+
+
+.bouton-cta{@extend .ombre; background: linear-gradient($secondaire, $primaire); color: $blanc; padding: 0.7rem 2rem; border-radius: 50px; @extend .block; max-width: 100px; @extend .alignerCentre; margin: 3rem auto 4rem;}
+
+
+
+
+// Généralité html
+
+
+body{background-color: grey; margin: 0;}
+a{color: $noir; text-decoration: none;}
+ul{list-style: none; padding-left: 0;}
+
+
+
+
+
+// Annonce des classes préfaites
+
+
+.wrapper{
+    width: $smartphone; margin: auto;
+}
+
+
+
+// Template
+
+
+
+.page {@extend .wrapper;
+
+
+
+
+
+
+    // Section header
+
+
+
+
+
+
+    header{ @extend .relative; @extend .alignerCentre; @extend .padding; background-color: $blanc;
+    
+        .fleche-section{@extend .absolute; top: 50%; transform: translateY(-50%);
+            img{width: 25px;}
+        }
+    }
+
+
+
+
+     // Section corps de page
+
+
+
+
+     .corps-de-page{ @extend .padding; padding-top: 0.7rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
+
+        .titre{ @extend .relative;
+            span{width: 20px; height: 20px; @extend .absolute; top: 0.3rem; right: 1.5rem; background: url(images/pictos/heart.svg) no-repeat;}
+        }
+
+
+        article{
+
+            h2{text-transform: uppercase;
+                &::after{@extend .block; content: ""; width: 60px; height: 4px; background-color: $tertiaire;}
+            }
+
+            a {
+
+                div{@extend .padding; @extend .relative; @extend .ombre; @extend .arrondis; background-color: $blanc; margin-bottom: 1rem;
+
+                    .description-plat{h3, p{margin: 0;} box-shadow: none; padding: 0; margin: 0;}
+                    span{@extend .absolute; bottom: 1rem; right: 1rem; font-weight: 600;}                    
+                
+                }
+             }
+}
+
+
+
+
+     }
+
+
+    // Section footer
+
+
+    footer{padding: 0.5rem 1rem; background-color: $noir; color: $blanc; font-size: 0.9rem; font-weight: 300;
+    
+        .logo-footer{width: 150px; @extend .block; margin-top: 1rem;}
+        
+        ul li { margin: 0.5rem 0;
+            
+            a{color: $blanc;
+            
+                img{width: 20px; height: 100%; color: $blanc; margin-right: 0.5rem;}
+            } 
+        } 
+    
+    }
+
+}

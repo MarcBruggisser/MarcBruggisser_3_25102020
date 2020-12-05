@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+.padding, .page header, .page .corps-de-page, .page .corps-de-page article a div {
+  padding: 1rem;
+}
+
+.arrondis, .page .corps-de-page article a div {
+  border-radius: 15px;
+}
+
+.ombre, .bouton-cta, .page .corps-de-page article a div {
+  -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
+          box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
+}
+
+.shrikhand, h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.roboto, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.alignerCentre, .bouton-cta, .page header {
+  text-align: center;
+}
+
+.block, .bouton-cta, .page .corps-de-page article h2::after, .page footer .logo-footer {
+  display: block;
+}
+
+.relative, .page header, .page .corps-de-page .titre, .page .corps-de-page article a div {
+  position: relative;
+}
+
+.absolute, .page header .fleche-section, .page .corps-de-page .titre span, .page .corps-de-page article a div span {
+  position: absolute;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+.bouton-cta {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFF;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  max-width: 100px;
+  margin: 3rem auto 4rem;
+}
+
+body {
+  background-color: grey;
+  margin: 0;
+}
+
+a {
+  color: #313030;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wrapper, .page {
+  width: 450px;
+  margin: auto;
+}
+
+.page header {
+  background-color: #FFF;
+}
+
+.page header .fleche-section {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page header .fleche-section img {
+  width: 25px;
+}
+
+.page .corps-de-page {
+  padding-top: 0.7rem;
+  background-color: #e2dddd;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.page .corps-de-page .titre span {
+  width: 20px;
+  height: 20px;
+  top: 0.3rem;
+  right: 1.5rem;
+  background: url(images/pictos/heart.svg) no-repeat;
+}
+
+.page .corps-de-page article h2 {
+  text-transform: uppercase;
+}
+
+.page .corps-de-page article h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #99E2D0;
+}
+
+.page .corps-de-page article a div {
+  background-color: #FFF;
+  margin-bottom: 1rem;
+}
+
+.page .corps-de-page article a div .description-plat {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page .corps-de-page article a div .description-plat h3, .page .corps-de-page article a div .description-plat p {
+  margin: 0;
+}
+
+.page .corps-de-page article a div span {
+  bottom: 1rem;
+  right: 1rem;
+  font-weight: 600;
+}
+
+.page footer {
+  padding: 0.5rem 1rem;
+  background-color: #313030;
+  color: #FFF;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.page footer .logo-footer {
+  width: 150px;
+  margin-top: 1rem;
+}
+
+.page footer ul li {
+  margin: 0.5rem 0;
+}
+
+.page footer ul li a {
+  color: #FFF;
+}
+
+.page footer ul li a img {
+  width: 20px;
+  height: 100%;
+  color: #FFF;
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
