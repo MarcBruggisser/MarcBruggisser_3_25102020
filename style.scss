@@ -68,7 +68,7 @@ h2{font-weight: 300;}
 body{background-color: grey; margin: 0;}
 a{color: $noir; text-decoration: none;}
 ul{list-style: none; padding-left: 0;}
-
+img{max-width: 100%;}
 
 
 
@@ -109,23 +109,33 @@ ul{list-style: none; padding-left: 0;}
 
 
 
+    // Section image
+
+
+    figure {margin: 0;
+    
+        img{@extend .block;}
+    }
+
+
+
 
      // Section corps de page
 
 
 
 
-     .corps-de-page{ @extend .padding; padding-top: 0.7rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
+     .corps-de-page{ @extend .padding; padding-top: 0.7rem; @extend .relative; z-index: 1; margin-top: -4rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
 
         .titre{ @extend .relative;
-            span{width: 20px; height: 20px; @extend .absolute; top: 0.3rem; right: 1.5rem; background: url(images/pictos/heart.svg) no-repeat;}
+           a span{width: 20px; height: 20px; @extend .absolute; top: 0.3rem; right: 1.5rem; background: url(images/pictos/heart.svg) no-repeat;}
         }
 
 
         article{
 
             h2{text-transform: uppercase;
-                &::after{@extend .block; content: ""; width: 60px; height: 4px; background-color: $tertiaire;}
+                &::after{@extend .block; content: ""; width: 60px; height: 4px; margin-top: 5px; background-color: $tertiaire;}
             }
 
             a {

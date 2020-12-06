@@ -24,15 +24,15 @@
   text-align: center;
 }
 
-.block, .bouton-cta, .page .corps-de-page article h2::after, .page footer .logo-footer {
+.block, .bouton-cta, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
   display: block;
 }
 
-.relative, .page header, .page .corps-de-page .titre, .page .corps-de-page article a div {
+.relative, .page header, .page .corps-de-page, .page .corps-de-page .titre, .page .corps-de-page article a div {
   position: relative;
 }
 
-.absolute, .page header .fleche-section, .page .corps-de-page .titre span, .page .corps-de-page article a div span {
+.absolute, .page header .fleche-section, .page .corps-de-page .titre a span, .page .corps-de-page article a div span {
   position: absolute;
 }
 
@@ -65,6 +65,10 @@ ul {
   padding-left: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .wrapper, .page {
   width: 450px;
   margin: auto;
@@ -84,14 +88,20 @@ ul {
   width: 25px;
 }
 
+.page figure {
+  margin: 0;
+}
+
 .page .corps-de-page {
   padding-top: 0.7rem;
+  z-index: 1;
+  margin-top: -4rem;
   background-color: #e2dddd;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-.page .corps-de-page .titre span {
+.page .corps-de-page .titre a span {
   width: 20px;
   height: 20px;
   top: 0.3rem;
@@ -107,6 +117,7 @@ ul {
   content: "";
   width: 60px;
   height: 4px;
+  margin-top: 5px;
   background-color: #99E2D0;
 }
 
