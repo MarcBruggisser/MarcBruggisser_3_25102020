@@ -1,3 +1,7 @@
+// Import des feuilles de styles
+
+
+
 body{@extend .roboto;}
 
 
@@ -58,7 +62,8 @@ h2{font-weight: 300;}
 
 
 .bouton-cta{@extend .ombre; background: linear-gradient($secondaire, $primaire); color: $blanc; padding: 0.7rem 2rem; border-radius: 50px; @extend .block; max-width: 100px; @extend .alignerCentre; margin: 3rem auto 4rem;}
-
+.vignette{@extend .padding; @extend .relative; @extend .ombre; @extend .arrondis; background-color: $blanc; margin-bottom: 1rem;}
+.description-vignette{h3, p{margin: 0;} box-shadow: none; padding: 0; margin: 0;}
 
 
 
@@ -66,11 +71,13 @@ h2{font-weight: 300;}
 
 
 body{background-color: grey; margin: 0;}
+section{@extend .padding;}
 a{color: $noir; text-decoration: none;}
 ul{list-style: none; padding-left: 0;}
-img{max-width: 100%;}
+img{max-width: 100%; @extend .block;}
 
 
+.fa-heart{&:hover{color: $primaire;}}
 
 
 // Annonce des classes préfaites
@@ -81,15 +88,55 @@ img{max-width: 100%;}
 }
 
 
+// Template page d'accueil
 
-// Template
+.accueil{
+
+    h1{@extend .roboto;}
+    h2{font-weight: 600;}
+
+    .localisation{background-color: #c4c3c3; @extend .alignerCentre;
+    
+        p i{margin-right: 1rem;}
+    }
+
+    .presentation{background-color: $gris; padding: 2rem;
+        @extend .alignerCentre;
+
+        h1 span{@extend .block;}
+        p{font-weight: 300;}
+        .bouton-cta{max-width: 180px; margin: 2rem auto 3rem;}
+    }
+
+    .fonctionnement{background-color: $blanc;
+    
+        ol li{@extend .vignette; background-color: $gris;}
+
+    }
+
+    .restaurants{background-color: $gris;
+    
+        div{
+        
+            img{max-height: 200px; width: 100%; object-fit: cover;}
+            .vignette{border-top-left-radius: 0; border-top-right-radius: 0;}
+            .description-vignette{@extend .vignette;}
+        }
+    
+    }
+
+}
+
+
+
+
+
+
+// Template page restaurant
 
 
 
 .page {@extend .wrapper;
-
-
-
 
 
 
@@ -103,7 +150,7 @@ img{max-width: 100%;}
     header{ @extend .relative; @extend .alignerCentre; @extend .padding; background-color: $blanc;
     
         .fleche-section{@extend .absolute; top: 50%; transform: translateY(-50%);
-            img{width: 25px;}
+            i{width: 25px;}
         }
     }
 
@@ -114,7 +161,7 @@ img{max-width: 100%;}
 
     figure {margin: 0;
     
-        img{@extend .block;}
+        img{@extend .block; width: 100%; max-height: 300px; object-fit: cover;}
     }
 
 
@@ -128,21 +175,22 @@ img{max-width: 100%;}
      .corps-de-page{ @extend .padding; padding-top: 0.7rem; @extend .relative; z-index: 1; margin-top: -4rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
 
         .titre{ @extend .relative;
-           a span{width: 20px; height: 20px; @extend .absolute; top: 0.3rem; right: 1.5rem; background: url(images/pictos/heart.svg) no-repeat;}
+            h1{font-size: 2rem;}
+           a i{width: 20px; height: 20px; @extend .absolute; top: 0.7rem; right: 1.5rem; font-size: 1.5rem;}
         }
 
 
         article{
 
-            h2{text-transform: uppercase;
+            h2{font-size: 1.3rem; text-transform: uppercase;
                 &::after{@extend .block; content: ""; width: 60px; height: 4px; margin-top: 5px; background-color: $tertiaire;}
             }
 
             a {
 
-                div{@extend .padding; @extend .relative; @extend .ombre; @extend .arrondis; background-color: $blanc; margin-bottom: 1rem;
+                div{@extend .vignette;
 
-                    .description-plat{h3, p{margin: 0;} box-shadow: none; padding: 0; margin: 0;}
+                    .description-plat{@extend .description-vignette;}
                     span{@extend .absolute; bottom: 1rem; right: 1rem; font-weight: 600;}                    
                 
                 }
@@ -166,7 +214,7 @@ img{max-width: 100%;}
             
             a{color: $blanc;
             
-                img{width: 20px; height: 100%; color: $blanc; margin-right: 0.5rem;}
+                i{width: 18px; color: $blanc; margin-right: 0.5rem; text-align: center;}
             } 
         } 
     

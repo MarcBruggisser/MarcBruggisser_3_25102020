@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
-.padding, .page header, .page .corps-de-page, .page .corps-de-page article a div {
+.padding, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, section, .page header, .page .corps-de-page {
   padding: 1rem;
 }
 
-.arrondis, .page .corps-de-page article a div {
+.arrondis, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
   border-radius: 15px;
 }
 
-.ombre, .bouton-cta, .page .corps-de-page article a div {
+.ombre, .bouton-cta, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
   -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
           box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
 }
@@ -16,23 +16,23 @@
   font-family: 'Shrikhand', cursive;
 }
 
-.roboto, body {
+.roboto, body, .accueil h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-.alignerCentre, .bouton-cta, .page header {
+.alignerCentre, .bouton-cta, .accueil .localisation, .accueil .presentation, .page header {
   text-align: center;
 }
 
-.block, .bouton-cta, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
+.block, .bouton-cta, img, .accueil .presentation h1 span, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
   display: block;
 }
 
-.relative, .page header, .page .corps-de-page, .page .corps-de-page .titre, .page .corps-de-page article a div {
+.relative, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, .page header, .page .corps-de-page, .page .corps-de-page .titre {
   position: relative;
 }
 
-.absolute, .page header .fleche-section, .page .corps-de-page .titre a span, .page .corps-de-page article a div span {
+.absolute, .page header .fleche-section, .page .corps-de-page .titre a i, .page .corps-de-page article a div span {
   position: absolute;
 }
 
@@ -48,6 +48,22 @@ h2 {
   border-radius: 50px;
   max-width: 100px;
   margin: 3rem auto 4rem;
+}
+
+.vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
+  background-color: #FFF;
+  margin-bottom: 1rem;
+}
+
+.description-vignette, .page .corps-de-page article a div .description-plat {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.description-vignette h3, .page .corps-de-page article a div .description-plat h3, .description-vignette p, .page .corps-de-page article a div .description-plat p {
+  margin: 0;
 }
 
 body {
@@ -69,9 +85,63 @@ img {
   max-width: 100%;
 }
 
+.fa-heart:hover {
+  color: #9356DC;
+}
+
 .wrapper, .page {
   width: 450px;
   margin: auto;
+}
+
+.accueil h2 {
+  font-weight: 600;
+}
+
+.accueil .localisation {
+  background-color: #c4c3c3;
+}
+
+.accueil .localisation p i {
+  margin-right: 1rem;
+}
+
+.accueil .presentation {
+  background-color: #e2dddd;
+  padding: 2rem;
+}
+
+.accueil .presentation p {
+  font-weight: 300;
+}
+
+.accueil .presentation .bouton-cta {
+  max-width: 180px;
+  margin: 2rem auto 3rem;
+}
+
+.accueil .fonctionnement {
+  background-color: #FFF;
+}
+
+.accueil .fonctionnement ol li {
+  background-color: #e2dddd;
+}
+
+.accueil .restaurants {
+  background-color: #e2dddd;
+}
+
+.accueil .restaurants div img {
+  max-height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.accueil .restaurants div .vignette, .accueil .restaurants div .fonctionnement ol li, .accueil .fonctionnement ol .restaurants div li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .accueil .restaurants div .page .corps-de-page article a div, .page .corps-de-page article a .accueil .restaurants div div {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .page header {
@@ -84,12 +154,19 @@ img {
           transform: translateY(-50%);
 }
 
-.page header .fleche-section img {
+.page header .fleche-section i {
   width: 25px;
 }
 
 .page figure {
   margin: 0;
+}
+
+.page figure img {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page .corps-de-page {
@@ -101,15 +178,20 @@ img {
   border-top-right-radius: 50px;
 }
 
-.page .corps-de-page .titre a span {
+.page .corps-de-page .titre h1 {
+  font-size: 2rem;
+}
+
+.page .corps-de-page .titre a i {
   width: 20px;
   height: 20px;
-  top: 0.3rem;
+  top: 0.7rem;
   right: 1.5rem;
-  background: url(images/pictos/heart.svg) no-repeat;
+  font-size: 1.5rem;
 }
 
 .page .corps-de-page article h2 {
+  font-size: 1.3rem;
   text-transform: uppercase;
 }
 
@@ -119,22 +201,6 @@ img {
   height: 4px;
   margin-top: 5px;
   background-color: #99E2D0;
-}
-
-.page .corps-de-page article a div {
-  background-color: #FFF;
-  margin-bottom: 1rem;
-}
-
-.page .corps-de-page article a div .description-plat {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 0;
-  margin: 0;
-}
-
-.page .corps-de-page article a div .description-plat h3, .page .corps-de-page article a div .description-plat p {
-  margin: 0;
 }
 
 .page .corps-de-page article a div span {
@@ -164,10 +230,10 @@ img {
   color: #FFF;
 }
 
-.page footer ul li a img {
-  width: 20px;
-  height: 100%;
+.page footer ul li a i {
+  width: 18px;
   color: #FFF;
   margin-right: 0.5rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
