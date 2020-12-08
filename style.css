@@ -20,11 +20,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.alignerCentre, .bouton-cta, .accueil .localisation, .accueil .presentation, .page header {
+.alignerCentre, .bouton-cta, .accueil .localisation, .accueil .presentation, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header {
   text-align: center;
 }
 
-.block, .bouton-cta, img, .accueil .presentation h1 span, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
+.block, .bouton-cta, img, .accueil .presentation h1 span, .accueil .fonctionnement ol li::before, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
   display: block;
 }
 
@@ -32,27 +32,29 @@
   position: relative;
 }
 
-.absolute, .page header .fleche-section, .page .corps-de-page .titre a i, .page .corps-de-page article a div span {
+.absolute, .fa-heart, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header .fleche-section, .page .corps-de-page article a div span {
   position: absolute;
 }
 
 h2 {
   font-weight: 300;
+  font-size: 1.3rem;
 }
 
 .bouton-cta {
+  padding: 0.9rem 1.8rem;
+  max-width: 100px;
+  margin: 3rem auto 4rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
-  padding: 0.7rem 2rem;
   border-radius: 50px;
-  max-width: 100px;
-  margin: 3rem auto 4rem;
 }
 
 .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
   background-color: #FFF;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .description-vignette, .page .corps-de-page article a div .description-plat {
@@ -85,6 +87,10 @@ img {
   max-width: 100%;
 }
 
+.fa-heart {
+  font-size: 1.5rem;
+}
+
 .fa-heart:hover {
   color: #9356DC;
 }
@@ -99,7 +105,8 @@ img {
 }
 
 .accueil .localisation {
-  background-color: #c4c3c3;
+  background-color: #bebebe;
+  padding: 0.05rem;
 }
 
 .accueil .localisation p i {
@@ -108,24 +115,80 @@ img {
 
 .accueil .presentation {
   background-color: #e2dddd;
-  padding: 2rem;
 }
 
 .accueil .presentation p {
   font-weight: 300;
+  max-width: 300px;
+  margin: auto;
 }
 
 .accueil .presentation .bouton-cta {
   max-width: 180px;
-  margin: 2rem auto 3rem;
+  margin: 2rem auto;
 }
 
 .accueil .fonctionnement {
+  padding-left: 2rem;
   background-color: #FFF;
 }
 
+.accueil .fonctionnement ol {
+  padding-left: 0;
+}
+
 .accueil .fonctionnement ol li {
+  padding: 1.5rem;
   background-color: #e2dddd;
+  list-style: none;
+}
+
+.accueil .fonctionnement ol li::before {
+  padding: 0.3rem 0.6rem 0.2rem;
+  font-size: 0.9rem;
+  margin-left: -2.1rem;
+  background-color: #9356DC;
+  color: #FFF;
+  border-radius: 100%;
+}
+
+.accueil .fonctionnement ol li::before:nth-of-type(1) {
+  content: "1";
+}
+
+.accueil .fonctionnement ol li::before:nth-of-type(2) {
+  content: "2";
+}
+
+.accueil .fonctionnement ol li::before:nth-of-type(3) {
+  content: "3";
+}
+
+.accueil .fonctionnement ol li:nth-of-type(1)::before {
+  content: "1";
+}
+
+.accueil .fonctionnement ol li:nth-of-type(2)::before {
+  content: "2";
+}
+
+.accueil .fonctionnement ol li:nth-of-type(3)::before {
+  content: "3";
+}
+
+.accueil .fonctionnement ol li i {
+  width: 20px;
+  left: 10%;
+  top: 40%;
+  color: #7B7B7B;
+  font-size: 1.3rem;
+}
+
+.accueil .fonctionnement ol li h3 {
+  padding-left: 100px;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .accueil .restaurants {
@@ -137,6 +200,8 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .accueil .restaurants div .vignette, .accueil .restaurants div .fonctionnement ol li, .accueil .fonctionnement ol .restaurants div li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .accueil .restaurants div .page .corps-de-page article a div, .page .corps-de-page article a .accueil .restaurants div div {
@@ -144,8 +209,17 @@ img {
   border-top-right-radius: 0;
 }
 
+.accueil .restaurants div .description-vignette .fa-heart, .accueil .restaurants .page .corps-de-page article a div .description-plat .fa-heart, .page .corps-de-page article a .accueil .restaurants div .description-plat .fa-heart {
+  right: 1.5rem;
+  top: 25%;
+}
+
 .page header {
   background-color: #FFF;
+}
+
+.page header img {
+  margin: auto;
 }
 
 .page header .fleche-section {
@@ -182,7 +256,7 @@ img {
   font-size: 2rem;
 }
 
-.page .corps-de-page .titre a i {
+.page .corps-de-page .titre a .fa-heart {
   width: 20px;
   height: 20px;
   top: 0.7rem;
@@ -191,7 +265,6 @@ img {
 }
 
 .page .corps-de-page article h2 {
-  font-size: 1.3rem;
   text-transform: uppercase;
 }
 
