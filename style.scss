@@ -62,6 +62,10 @@ h2{font-weight: 300; font-size: 1.3rem;}
 
 
 .bouton-cta{padding: 0.9rem 1.8rem; @extend .block; max-width: 100px; margin: 3rem auto 4rem; @extend .alignerCentre; background: linear-gradient($secondaire, $primaire); @extend .ombre; color: $blanc; border-radius: 50px;  }
+.nouveau-bouton{@extend .absolute; z-index: 1; top: 1rem; right: 1rem; left: auto; padding: 0.5rem 1rem; 
+    background-color: $tertiaire; @extend .ombre; color: #088C6B; font-style: normal; font-weight: 600;
+}
+
 .vignette{@extend .padding; @extend .relative; @extend .ombre; @extend .arrondis; background-color: $blanc; margin-bottom: 1rem; cursor: pointer;}
 .description-vignette{h3, p{margin: 0;} box-shadow: none; padding: 0; margin: 0;}
 
@@ -142,7 +146,7 @@ img{max-width: 100%; @extend .block;}
 
     .restaurants{background-color: $gris;
     
-        div{
+        div{ @extend .relative;
         
             img{max-height: 200px; width: 100%; object-fit: cover; border-top-left-radius: $border-radius-value; border-top-right-radius: $border-radius-value;}
             .vignette{border-top-left-radius: 0; border-top-right-radius: 0;}

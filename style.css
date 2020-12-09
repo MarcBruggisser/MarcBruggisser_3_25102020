@@ -7,7 +7,7 @@
   border-radius: 15px;
 }
 
-.ombre, .bouton-cta, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
+.ombre, .bouton-cta, .nouveau-bouton, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
   -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
           box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
 }
@@ -28,11 +28,11 @@
   display: block;
 }
 
-.relative, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, .page header, .page .corps-de-page, .page .corps-de-page .titre {
+.relative, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, .accueil .restaurants div, .page header, .page .corps-de-page, .page .corps-de-page .titre {
   position: relative;
 }
 
-.absolute, .fa-heart, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header .fleche-section, .page .corps-de-page article a div span {
+.absolute, .nouveau-bouton, .fa-heart, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header .fleche-section, .page .corps-de-page article a div span {
   position: absolute;
 }
 
@@ -49,6 +49,18 @@ h2 {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #FFF;
   border-radius: 50px;
+}
+
+.nouveau-bouton {
+  z-index: 1;
+  top: 1rem;
+  right: 1rem;
+  left: auto;
+  padding: 0.5rem 1rem;
+  background-color: #99E2D0;
+  color: #088C6B;
+  font-style: normal;
+  font-weight: 600;
 }
 
 .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
