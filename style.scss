@@ -1,4 +1,3 @@
-// Import des feuilles de styles
 
 
 
@@ -9,7 +8,9 @@ body{@extend .roboto;}
 // Annonce des taille d'écrans
 
 
-$smartphone:450px;
+$smartphone:400px;
+$tablette:800px;
+$desktop:1100px;
 
 
 // Annonce des classes de mise en forme pour les composants
@@ -47,9 +48,15 @@ $border-radius-value:15px; .arrondis{border-radius: $border-radius-value;}
 
 
 .block{display: block;}
+.cacher{display: none;}
 
 .relative{position: relative;}
 .absolute{position: absolute;}
+
+
+// Annonce des animations
+
+.animer{transition: 0.5s;}
 
 
 
@@ -61,7 +68,9 @@ h2{font-weight: 300; font-size: 1.3rem;}
 
 
 
-.bouton-cta{padding: 0.9rem 1.8rem; @extend .block; max-width: 100px; margin: 3rem auto 4rem; @extend .alignerCentre; background: linear-gradient($secondaire, $primaire); @extend .ombre; color: $blanc; border-radius: 50px;  }
+.bouton-cta{padding: 0.9rem 1.8rem; @extend .block; max-width: 100px; margin: 3rem auto 4rem; @extend .alignerCentre; background: linear-gradient($secondaire, $primaire); @extend .ombre; color: $blanc; border-radius: 50px; @extend .animer;
+    &:hover{background: linear-gradient(#E69AE0, #B274E1);}
+}
 .nouveau-bouton{@extend .absolute; z-index: 1; top: 1rem; right: 1rem; left: auto; padding: 0.5rem 1rem; 
     background-color: $tertiaire; @extend .ombre; color: #088C6B; font-style: normal; font-weight: 600;
 }
@@ -81,8 +90,7 @@ ul{list-style: none; padding-left: 0;}
 img{max-width: 100%; @extend .block;}
 
 
-.fa-heart{@extend .absolute; font-size: 1.5rem; 
-    
+.fa-heart{@extend .absolute; font-size: 1.5rem;    
     &:hover{color: $primaire;}
 }
 
@@ -92,6 +100,9 @@ img{max-width: 100%; @extend .block;}
 
 .wrapper{
     width: $smartphone; margin: auto;
+
+    @media(min-width: $tablette){width: $tablette;}
+    @media(min-width: $desktop){width: $desktop;}
 }
 
 
@@ -127,16 +138,13 @@ img{max-width: 100%; @extend .block;}
                 
                     &:nth-of-type(1){content: "1";}
                     &:nth-of-type(2){content: "2";}
-                    &:nth-of-type(3){content: "3";}
-                
+                    &:nth-of-type(3){content: "3";}              
                 }
-
 
                 &:nth-of-type(1)::before{content: "1";}
                 &:nth-of-type(2)::before{content: "2";}
                 &:nth-of-type(3)::before{content: "3";}
-    
-    
+       
                 i{width: 20px; left: 10%; @extend .absolute; top: 40%; color: #7B7B7B; @extend .alignerCentre; font-size: 1.3rem;}
                 h3{padding-left: 100px; margin: 0; font-size: 1rem; font-weight: 500;}
             }
@@ -191,65 +199,74 @@ img{max-width: 100%; @extend .block;}
     // Section image
 
 
-    figure {margin: 0;
-    
+    figure {margin: 0;   
         img{@extend .block; width: 100%; max-height: 300px; object-fit: cover;}
     }
 
 
 
 
-     // Section corps de page
+    // Section corps de page
 
 
 
 
-     .corps-de-page{ @extend .padding; padding-top: 0.7rem; @extend .relative; z-index: 1; margin-top: -4rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
+    .corps-de-page{ @extend .padding; padding-top: 0.7rem; @extend .relative; z-index: 1; margin-top: -4rem; background-color: $gris; border-top-left-radius: 50px; border-top-right-radius: 50px;
 
         .titre{ @extend .relative;
             h1{font-size: 2rem;}
            a .fa-heart{width: 20px; height: 20px; top: 0.7rem; right: 1.5rem; font-size: 1.5rem;}
         }
 
-
-        article{
+        .plats article{
 
             h2{text-transform: uppercase;
                 &::after{@extend .block; content: ""; width: 60px; height: 4px; margin-top: 5px; background-color: $tertiaire;}
             }
 
-            a {
-
-                div{@extend .vignette;
-
-                    .description-plat{@extend .description-vignette;}
-                    span{@extend .absolute; bottom: 1rem; right: 1rem; font-weight: 600;}                    
-                
+            .liste-plats{
+                a {
+                    div{@extend .vignette;
+    
+                        .description-plat{@extend .description-vignette;}
+                        span{@extend .absolute; bottom: 1rem; right: 1rem; font-weight: 600;}                                    
+                    }
                 }
-             }
-}
+            }
+        }
 
+        @media(min-width: $tablette){
+            h1, h2{margin-left: 4rem;}
+            .plats article .liste-plats a div{width: 80%; margin: 0 auto 1rem;}}
 
-
+        @media(min-width: $desktop){
+            h1, h2{margin-left: 0; text-align: center;}
+            h2::after{margin: auto;}
+            .plats{display: flex; justify-content: space-between;
+                article .liste-plats{
+                    a div{width: 310px; padding: 2rem 1rem;}
+                }
+            } 
+        }
 
      }
 
 
     // Section footer
 
-
     footer{padding: 0.5rem 1rem; background-color: $noir; color: $blanc; font-size: 0.9rem; font-weight: 300;
     
         .logo-footer{width: 150px; @extend .block; margin-top: 1rem;}
         
-        ul li { margin: 0.5rem 0;
-            
-            a{color: $blanc;
-            
+        ul li { margin: 0.5rem 0;      
+            a{color: $blanc;            
                 i{width: 18px; color: $blanc; margin-right: 0.5rem; text-align: center;}
             } 
-        } 
-    
+        }
+        
+        @media(min-width: $tablette){
+            img, ul{margin-left: 4rem;}
+        }
     }
 
 }

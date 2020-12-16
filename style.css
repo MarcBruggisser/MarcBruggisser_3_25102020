@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
-.padding, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, section, .page header, .page .corps-de-page {
+.padding, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .page .corps-de-page .plats article .liste-plats a div, section, .page header, .page .corps-de-page {
   padding: 1rem;
 }
 
-.arrondis, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
+.arrondis, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .page .corps-de-page .plats article .liste-plats a div {
   border-radius: 15px;
 }
 
-.ombre, .bouton-cta, .nouveau-bouton, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
+.ombre, .bouton-cta, .nouveau-bouton, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .page .corps-de-page .plats article .liste-plats a div {
   -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
           box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.15);
 }
@@ -24,16 +24,25 @@
   text-align: center;
 }
 
-.block, .bouton-cta, img, .accueil .presentation h1 span, .accueil .fonctionnement ol li::before, .page figure img, .page .corps-de-page article h2::after, .page footer .logo-footer {
+.block, .bouton-cta, img, .accueil .presentation h1 span, .accueil .fonctionnement ol li::before, .page figure img, .page .corps-de-page .plats article h2::after, .page footer .logo-footer {
   display: block;
 }
 
-.relative, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div, .accueil .restaurants div, .page header, .page .corps-de-page, .page .corps-de-page .titre {
+.cacher {
+  display: none;
+}
+
+.relative, .vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .page .corps-de-page .plats article .liste-plats a div, .accueil .restaurants div, .page header, .page .corps-de-page, .page .corps-de-page .titre {
   position: relative;
 }
 
-.absolute, .nouveau-bouton, .fa-heart, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header .fleche-section, .page .corps-de-page article a div span {
+.absolute, .nouveau-bouton, .fa-heart, .accueil .fonctionnement ol li::before, .accueil .fonctionnement ol li i, .page header .fleche-section, .page .corps-de-page .plats article .liste-plats a div span {
   position: absolute;
+}
+
+.animer, .bouton-cta {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 h2 {
@@ -51,6 +60,11 @@ h2 {
   border-radius: 50px;
 }
 
+.bouton-cta:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#E69AE0), to(#B274E1));
+  background: linear-gradient(#E69AE0, #B274E1);
+}
+
 .nouveau-bouton {
   z-index: 1;
   top: 1rem;
@@ -63,20 +77,20 @@ h2 {
   font-weight: 600;
 }
 
-.vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .page .corps-de-page article a div {
+.vignette, .accueil .fonctionnement ol li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .page .corps-de-page .plats article .liste-plats a div {
   background-color: #FFF;
   margin-bottom: 1rem;
   cursor: pointer;
 }
 
-.description-vignette, .page .corps-de-page article a div .description-plat {
+.description-vignette, .page .corps-de-page .plats article .liste-plats a div .description-plat {
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0;
   margin: 0;
 }
 
-.description-vignette h3, .page .corps-de-page article a div .description-plat h3, .description-vignette p, .page .corps-de-page article a div .description-plat p {
+.description-vignette h3, .page .corps-de-page .plats article .liste-plats a div .description-plat h3, .description-vignette p, .page .corps-de-page .plats article .liste-plats a div .description-plat p {
   margin: 0;
 }
 
@@ -108,8 +122,20 @@ img {
 }
 
 .wrapper, .page {
-  width: 450px;
+  width: 400px;
   margin: auto;
+}
+
+@media (min-width: 800px) {
+  .wrapper, .page {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .wrapper, .page {
+    width: 1100px;
+  }
 }
 
 .accueil h2 {
@@ -216,12 +242,12 @@ img {
   border-top-right-radius: 15px;
 }
 
-.accueil .restaurants div .vignette, .accueil .restaurants div .fonctionnement ol li, .accueil .fonctionnement ol .restaurants div li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page article a div .description-plat, .page .corps-de-page article a .accueil .restaurants div .description-plat, .accueil .restaurants div .page .corps-de-page article a div, .page .corps-de-page article a .accueil .restaurants div div {
+.accueil .restaurants div .vignette, .accueil .restaurants div .fonctionnement ol li, .accueil .fonctionnement ol .restaurants div li, .accueil .restaurants div .description-vignette, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat, .accueil .restaurants div .page .corps-de-page .plats article .liste-plats a div, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div div {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.accueil .restaurants div .description-vignette .fa-heart, .accueil .restaurants .page .corps-de-page article a div .description-plat .fa-heart, .page .corps-de-page article a .accueil .restaurants div .description-plat .fa-heart {
+.accueil .restaurants div .description-vignette .fa-heart, .accueil .restaurants .page .corps-de-page .plats article .liste-plats a div .description-plat .fa-heart, .page .corps-de-page .plats article .liste-plats a .accueil .restaurants div .description-plat .fa-heart {
   right: 1.5rem;
   top: 25%;
 }
@@ -276,11 +302,11 @@ img {
   font-size: 1.5rem;
 }
 
-.page .corps-de-page article h2 {
+.page .corps-de-page .plats article h2 {
   text-transform: uppercase;
 }
 
-.page .corps-de-page article h2::after {
+.page .corps-de-page .plats article h2::after {
   content: "";
   width: 60px;
   height: 4px;
@@ -288,10 +314,42 @@ img {
   background-color: #99E2D0;
 }
 
-.page .corps-de-page article a div span {
+.page .corps-de-page .plats article .liste-plats a div span {
   bottom: 1rem;
   right: 1rem;
   font-weight: 600;
+}
+
+@media (min-width: 800px) {
+  .page .corps-de-page h1, .page .corps-de-page h2 {
+    margin-left: 4rem;
+  }
+  .page .corps-de-page .plats article .liste-plats a div {
+    width: 80%;
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page .corps-de-page h1, .page .corps-de-page h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .page .corps-de-page h2::after {
+    margin: auto;
+  }
+  .page .corps-de-page .plats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page .corps-de-page .plats article .liste-plats a div {
+    width: 310px;
+    padding: 2rem 1rem;
+  }
 }
 
 .page footer {
@@ -320,5 +378,11 @@ img {
   color: #FFF;
   margin-right: 0.5rem;
   text-align: center;
+}
+
+@media (min-width: 800px) {
+  .page footer img, .page footer ul {
+    margin-left: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
