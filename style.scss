@@ -154,7 +154,7 @@ img{max-width: 100%; @extend .block;}
 
     .restaurants{background-color: $gris;
     
-        div{ @extend .relative;
+        .liste-restaurants div{ @extend .relative;
         
             img{max-height: 200px; width: 100%; object-fit: cover; border-top-left-radius: $border-radius-value; border-top-right-radius: $border-radius-value;}
             .vignette{border-top-left-radius: 0; border-top-right-radius: 0;}
@@ -164,6 +164,33 @@ img{max-width: 100%; @extend .block;}
             }
         }
     
+    }
+
+    @media(min-width: $tablette){
+        .localisation{padding: 2rem;
+            p{font-size: 1.2rem;}
+        }
+        .fonctionnement{
+            ol li{
+                h3{padding-left: 0; text-align: center;}
+                i{left: 30%;}
+            } 
+        }
+        .restaurants .liste-restaurants{ display: flex; flex-wrap: wrap; justify-content: center;
+
+            .restaurant-item{ width: 45%; margin: 0.5rem 1rem;
+                .description-vignette{padding: 2rem;}
+            } 
+        } 
+    }
+    @media(min-width: $desktop){
+        .fonctionnement{
+            ol li{
+                h3{padding-left: 0; text-align: center;}
+                i{left: 35%;}
+            } 
+        }
+        .restaurants .liste-restaurants .restaurants-item .description-vignette{width: 408px;}
     }
 
 }
@@ -200,7 +227,9 @@ img{max-width: 100%; @extend .block;}
 
 
     figure {margin: 0;   
-        img{@extend .block; width: 100%; max-height: 300px; object-fit: cover;}
+        img{@extend .block; width: 100%; max-height: 300px; object-fit: cover;
+            @media(min-width: $tablette){max-height: 400px;}
+        }
     }
 
 
