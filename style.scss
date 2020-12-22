@@ -121,7 +121,7 @@ img{max-width: 100%; @extend .block;}
     }
 }
 @keyframes loading{
-    100%{transform: translate(-50%, -50%) rotate(360deg); z-index: 2;}
+    100%{transform: translate(-50%, -50%) rotate(360deg);}
 }
 @keyframes fade-in{
     0%, 70%{opacity: 1; z-index: 2;}
@@ -155,7 +155,7 @@ img{max-width: 100%; @extend .block;}
         ol{
             padding-left: 0;
             
-            li{@extend .vignette; padding: 1.5rem; @extend .relative; background-color: $gris; list-style: none;
+            li{@extend .vignette; padding: 1.5rem; @extend .relative; background-color: $gris; list-style: none; @extend .animer;
 
                 &::before{@extend .block; padding: 0.3rem 0.6rem 0.2rem;  @extend .absolute; font-size: 0.9rem; @extend .alignerCentre; margin-left: -2.1rem;
                     background-color: $primaire; color: $blanc; border-radius: 100%;
@@ -170,7 +170,11 @@ img{max-width: 100%; @extend .block;}
                 &:nth-of-type(3)::before{content: "3";}
        
                 i{width: 20px; left: 10%; @extend .absolute; top: 40%; color: #7B7B7B; @extend .alignerCentre; font-size: 1.3rem;}
-                h3{padding-left: 100px; margin: 0; font-size: 1rem; font-weight: 500;}
+                h3{padding-left: 75px; margin: 0; font-size: 1rem; font-weight: 500;}
+
+                &:hover{ background-color: #9256dc33;
+                    i{color: $primaire;}
+                }
             }
         } 
 
@@ -273,6 +277,10 @@ img{max-width: 100%; @extend .block;}
 
         .plats article{
 
+            &:nth-child(1){animation: apparition-article 0.8s ease 1;}
+            &:nth-child(2){animation: apparition-article 1.3s ease 1;}
+            &:nth-child(3){animation: apparition-article 1.8s ease 1;}
+
             h2{text-transform: uppercase;
                 &::after{@extend .block; content: ""; width: 60px; height: 4px; margin-top: 5px; background-color: $tertiaire;}
             }
@@ -286,6 +294,12 @@ img{max-width: 100%; @extend .block;}
                     }
                 }
             }
+        }
+
+        @keyframes apparition-article{
+            0%{opacity: 0;}
+            30%{opacity: 0; transform: translateY(20px);}
+            100%{opacity: 1;}
         }
 
         @media(min-width: $tablette){
@@ -314,7 +328,8 @@ img{max-width: 100%; @extend .block;}
         ul li { margin: 0.5rem 0;      
             a{color: $blanc;            
                 i{width: 18px; color: $blanc; margin-right: 0.5rem; text-align: center;}
-            } 
+                &:hover{color: $tertiaire;}
+            }
         }
         
         @media(min-width: $tablette){

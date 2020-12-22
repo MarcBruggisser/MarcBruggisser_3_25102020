@@ -40,7 +40,7 @@
   position: absolute;
 }
 
-.animer, .bouton-cta, .fas.fa-heart {
+.animer, .bouton-cta, .fas.fa-heart, .accueil .fonctionnement ol li {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -174,7 +174,6 @@ img {
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
             transform: translate(-50%, -50%) rotate(360deg);
-    z-index: 2;
   }
 }
 
@@ -182,7 +181,6 @@ img {
   100% {
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
             transform: translate(-50%, -50%) rotate(360deg);
-    z-index: 2;
   }
 }
 
@@ -293,10 +291,18 @@ img {
 }
 
 .accueil .fonctionnement ol li h3 {
-  padding-left: 100px;
+  padding-left: 75px;
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.accueil .fonctionnement ol li:hover {
+  background-color: #9256dc33;
+}
+
+.accueil .fonctionnement ol li:hover i {
+  color: #9356DC;
 }
 
 .accueil .restaurants {
@@ -424,6 +430,21 @@ img {
   font-size: 1.5rem;
 }
 
+.page .corps-de-page .plats article:nth-child(1) {
+  -webkit-animation: apparition-article 0.8s ease 1;
+          animation: apparition-article 0.8s ease 1;
+}
+
+.page .corps-de-page .plats article:nth-child(2) {
+  -webkit-animation: apparition-article 1.3s ease 1;
+          animation: apparition-article 1.3s ease 1;
+}
+
+.page .corps-de-page .plats article:nth-child(3) {
+  -webkit-animation: apparition-article 1.8s ease 1;
+          animation: apparition-article 1.8s ease 1;
+}
+
 .page .corps-de-page .plats article h2 {
   text-transform: uppercase;
 }
@@ -440,6 +461,34 @@ img {
   bottom: 1rem;
   right: 1rem;
   font-weight: 600;
+}
+
+@-webkit-keyframes apparition-article {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition-article {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 800px) {
@@ -500,6 +549,10 @@ img {
   color: #FFF;
   margin-right: 0.5rem;
   text-align: center;
+}
+
+.page footer ul li a:hover {
+  color: #99E2D0;
 }
 
 @media (min-width: 800px) {
