@@ -27,6 +27,9 @@ $primaire:#9356DC;
 $secondaire:#FF79DA;
 $tertiaire:#99E2D0;
 
+$degrade-violet:linear-gradient(#E69AE0, #B274E1);
+$degrade-violet-inverse:linear-gradient(#B274E1, #E69AE0);
+
 
 // Annonce des marges et padding et autres mise en forme
 .padding{padding: 1rem;}
@@ -69,7 +72,7 @@ h2{font-weight: 300; font-size: 1.3rem;}
 
 
 .bouton-cta{padding: 0.9rem 1.8rem; @extend .block; max-width: 100px; margin: 3rem auto 4rem; @extend .alignerCentre; background: linear-gradient($secondaire, $primaire); @extend .ombre; color: $blanc; border-radius: 50px; @extend .animer;
-    &:hover{background: linear-gradient(#E69AE0, #B274E1);}
+    &:hover{background: $degrade-violet;     box-shadow: 2px 9px 19px 2px rgba(50, 50, 50, 0.35);}
 }
 .nouveau-bouton{@extend .absolute; z-index: 1; top: 1rem; right: 1rem; left: auto; padding: 0.5rem 1rem; 
     background-color: $tertiaire; @extend .ombre; color: #088C6B; font-style: normal; font-weight: 600;
@@ -90,8 +93,10 @@ ul{list-style: none; padding-left: 0;}
 img{max-width: 100%; @extend .block;}
 
 
-.fa-heart{@extend .absolute; font-size: 1.5rem;    
-    &:hover{color: $primaire;}
+.fa-heart{@extend .absolute; font-size: 1.5rem;}
+
+.fas.fa-heart{color: $primaire; opacity: 0; @extend .animer;
+    &:hover{opacity: 1;}
 }
 
 
@@ -104,6 +109,25 @@ img{max-width: 100%; @extend .block;}
     @media(min-width: $tablette){width: $tablette;}
     @media(min-width: $desktop){width: $desktop;}
 }
+
+
+
+// Template loading spinner
+
+.loading-spinner{width: 100%; height: 100vh; background-color: white; position: fixed; z-index: -2; opacity: 0; animation: fade-in 2s linear 1;
+    .cercle{@extend .absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg); width: 150px; height: 150px; @extend .ombre;
+        border: 15px solid $tertiaire; border-top: 15px solid $primaire; border-radius: 100%;
+        animation: loading 1s linear 2;
+    }
+}
+@keyframes loading{
+    100%{transform: translate(-50%, -50%) rotate(360deg); z-index: 2;}
+}
+@keyframes fade-in{
+    0%, 70%{opacity: 1; z-index: 2;}
+    100%{opacity: 0; z-index: 2;}
+}
+
 
 
 // Template page d'accueil
