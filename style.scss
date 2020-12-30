@@ -139,7 +139,9 @@ img{max-width: 100%; @extend .block;}
 
     .localisation{background-color: #bebebe; @extend .alignerCentre; padding: 0.05rem;
     
-        p i{margin-right: 1rem;}
+        h2{font-weight: 500;
+            i{margin-right: 1rem;}
+        }
     }
 
     .presentation{background-color: $gris;
@@ -158,11 +160,7 @@ img{max-width: 100%; @extend .block;}
             li{@extend .vignette; padding: 1.5rem; @extend .relative; background-color: $gris; list-style: none; @extend .animer;
 
                 &::before{@extend .block; padding: 0.3rem 0.6rem 0.2rem;  @extend .absolute; font-size: 0.9rem; @extend .alignerCentre; margin-left: -2.1rem;
-                    background-color: $primaire; color: $blanc; border-radius: 100%;
-                
-                    &:nth-of-type(1){content: "1";}
-                    &:nth-of-type(2){content: "2";}
-                    &:nth-of-type(3){content: "3";}              
+                    background-color: $primaire; color: $blanc; border-radius: 100%;            
                 }
 
                 &:nth-of-type(1)::before{content: "1";}
@@ -272,7 +270,7 @@ img{max-width: 100%; @extend .block;}
 
         .titre{ @extend .relative;
             h1{font-size: 2rem;}
-           a .fa-heart{width: 20px; height: 20px; top: 0.7rem; right: 1.5rem; font-size: 1.5rem;}
+           em .fa-heart{width: 20px; height: 20px; top: 0.7rem; right: 1.5rem; font-size: 1.5rem; cursor: pointer;}
         }
 
         .plats article{animation: apparition-article ease 1;

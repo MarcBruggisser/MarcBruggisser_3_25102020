@@ -218,7 +218,11 @@ img {
   padding: 0.05rem;
 }
 
-.accueil .localisation p i {
+.accueil .localisation h2 {
+  font-weight: 500;
+}
+
+.accueil .localisation h2 i {
   margin-right: 1rem;
 }
 
@@ -259,18 +263,6 @@ img {
   background-color: #9356DC;
   color: #FFF;
   border-radius: 100%;
-}
-
-.accueil .fonctionnement ol li::before:nth-of-type(1) {
-  content: "1";
-}
-
-.accueil .fonctionnement ol li::before:nth-of-type(2) {
-  content: "2";
-}
-
-.accueil .fonctionnement ol li::before:nth-of-type(3) {
-  content: "3";
 }
 
 .accueil .fonctionnement ol li:nth-of-type(1)::before {
@@ -425,12 +417,13 @@ img {
   font-size: 2rem;
 }
 
-.page .corps-de-page .titre a .fa-heart {
+.page .corps-de-page .titre em .fa-heart {
   width: 20px;
   height: 20px;
   top: 0.7rem;
   right: 1.5rem;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .page .corps-de-page .plats article {
