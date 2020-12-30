@@ -347,11 +347,11 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .accueil .restaurants .liste-restaurants .restaurant-item {
+  .accueil .restaurants .liste-restaurants a {
     width: 45%;
     margin: 0.5rem 1rem;
   }
-  .accueil .restaurants .liste-restaurants .restaurant-item .description-vignette, .accueil .restaurants .liste-restaurants .restaurant-item .page .corps-de-page .plats article .liste-plats a div .description-plat, .page .corps-de-page .plats article .liste-plats a div .accueil .restaurants .liste-restaurants .restaurant-item .description-plat {
+  .accueil .restaurants .liste-restaurants a .restaurant-item .description-vignette, .accueil .restaurants .liste-restaurants .page .corps-de-page .plats article .liste-plats a .restaurant-item div .description-plat, .page .corps-de-page .plats article .liste-plats .accueil .restaurants .liste-restaurants a .restaurant-item div .description-plat, .accueil .restaurants .liste-restaurants .page .corps-de-page .plats article .liste-plats a div .restaurant-item .description-plat, .page .corps-de-page .plats article .liste-plats .accueil .restaurants .liste-restaurants a div .restaurant-item .description-plat {
     padding: 2rem;
   }
 }
@@ -417,7 +417,7 @@ img {
   font-size: 2rem;
 }
 
-.page .corps-de-page .titre em .fa-heart {
+.page .corps-de-page .titre span .fa-heart {
   width: 20px;
   height: 20px;
   top: 0.7rem;
