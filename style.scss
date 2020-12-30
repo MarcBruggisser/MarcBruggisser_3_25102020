@@ -79,7 +79,7 @@ h2{font-weight: 300; font-size: 1.3rem;}
 }
 
 .vignette{@extend .padding; @extend .relative; @extend .ombre; @extend .arrondis; background-color: $blanc; margin-bottom: 1rem; cursor: pointer;}
-.description-vignette{h3, p{margin: 0;} box-shadow: none; padding: 0; margin: 0;}
+.description-vignette{h3, p{margin: 0; overflow: hidden; text-overflow: ellipsis;} box-shadow: none; border-radius: 0; padding: 0; margin: 0;}
 
 
 
@@ -289,7 +289,7 @@ img{max-width: 100%; @extend .block;}
                 a {
                     div{@extend .vignette; overflow: hidden;
     
-                        .description-plat{@extend .description-vignette; width: 100%; @extend .animer;}
+                        .description-plat{@extend .description-vignette; width: 100%; white-space: nowrap; @extend .animer;}
                         span{@extend .absolute; bottom: 1rem; right: 1rem; font-weight: 600; @extend .animer;}
                         .validateur{@extend .absolute; top: 0; margin: 0; width: 2rem; height: 43px; right: 0; transform: translateX(100%);
                             background-color: $tertiaire; border-top-left-radius: 0; border-bottom-left-radius: 0; @extend .animer;
@@ -304,7 +304,7 @@ img{max-width: 100%; @extend .block;}
                         }
 
                         &:hover{
-                            .description-plat{width: 60%; white-space: nowrap; overflow: hidden;}
+                            .description-plat{width: 60%;  overflow: hidden;}
                             span{right: 5rem;}
                             .validateur{transform: translateX(0);
                                 i{animation: icone 0.6s ease 1;}

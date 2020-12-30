@@ -88,12 +88,15 @@ h2 {
 .description-vignette, .page .corps-de-page .plats article .liste-plats a div .description-plat {
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-radius: 0;
   padding: 0;
   margin: 0;
 }
 
 .description-vignette h3, .page .corps-de-page .plats article .liste-plats a div .description-plat h3, .description-vignette p, .page .corps-de-page .plats article .liste-plats a div .description-plat p {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body {
@@ -468,6 +471,7 @@ img {
 
 .page .corps-de-page .plats article .liste-plats a div .description-plat {
   width: 100%;
+  white-space: nowrap;
 }
 
 .page .corps-de-page .plats article .liste-plats a div span {
@@ -519,7 +523,6 @@ img {
 
 .page .corps-de-page .plats article .liste-plats a div:hover .description-plat {
   width: 60%;
-  white-space: nowrap;
   overflow: hidden;
 }
 
